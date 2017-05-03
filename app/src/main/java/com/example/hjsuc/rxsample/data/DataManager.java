@@ -3,6 +3,7 @@ package com.example.hjsuc.rxsample.data;
 import android.content.Context;
 
 
+import com.example.hjsuc.rxsample.R;
 import com.example.hjsuc.rxsample.data.model.Search;
 import com.example.hjsuc.rxsample.data.service.ApiService;
 
@@ -30,8 +31,8 @@ public class DataManager {
     private ApiService mNaverApi;
 
 
-    public static String CLIENT_ID = "Your naver client id";
-    public static String CLIENT_SECRET = "Your naver client secret";
+    public static String clientId;
+    public static String clientSecret;
 
 
     public DataManager(Context context) {
@@ -52,6 +53,8 @@ public class DataManager {
     }
 
     private void createNaverApi() {
+        clientId = mContext.getString(R.string.clientid);
+        clientSecret = mContext.getString(R.string.clientsecret);
         mNaverApi = new Retrofit.Builder()
                 .baseUrl(NAVER_DOMAIN)
                 .client(mClient)

@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">RxSample</string>
+    <string name="clientid">Your naver client id</string>
+    <string name="clientsecret">Your naver client secret</string>
 </resources>
